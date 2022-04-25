@@ -36,7 +36,7 @@ $recettes = $connect->query($sql)->fetch_all(MYSQLI_ASSOC);
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
 
-    $stmt = $connect->prepare('SELECT id, password,Nom FROM users WHERE email = ?');
+    $stmt = $connect->prepare('SELECT id, password,Nom,Role FROM users WHERE email = ?');
 
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_POST['email']);
@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password,$Nom);
+        $stmt->bind_result($id, $password,$Nom,$Role);
         $stmt->fetch();
         // Account exists, now we verify the password.
         // Note: remember to use password_hash in your registration file to store the hashed passwords.
@@ -59,6 +59,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['name'] = $_POST['email'];
             $_SESSION['id'] = $id;
             $_SESSION['Nom'] = $Nom;
+            $_SESSION['Role'] = $Role;
             $stmt->close();
         } else {
             // Incorrect password

@@ -88,7 +88,10 @@
                             <li><a href="boutique.php">Boutique</a></li>
                             <li><a href="galerie.php">Galerie</a></li>
                             <li><a href="blog.php">Blog</a></li>
-                            
+                            <?php 
+                            if(isset($_SESSION['Role']) && $_SESSION['Role'] == '1'){ ?>
+                                <li><a href="ajoutRecette.php"> Ajouter Recette </a></li>
+                            <?php }?>
                             <li><a href="contact.php">Contact</a></li>
                         </ul>
                         <?php if (!isset($_SESSION['loggedin'])){ ?>
@@ -193,19 +196,19 @@
                     <h2>Nos partenaires</h2>
                     <div class="col-12 d-flex flex-wrap justify-content-center ">
                             <div class="card mr-5">
-                                <img class="card-img-top" src="images/partenaires/100-organic-product.png" width="200" height="180" alt="Card image cap">
+                                <img class="card-img-top" src="images/partenaires/100-organic-product.png" alt="Card image cap">
                             </div>
                             <div class="card mr-5">
-                                <img class="card-img-top" src="images/partenaires/100-organic.png" width="200" height="180" alt="Card image cap">
+                                <img class="card-img-top" src="images/partenaires/100-organic.png"  alt="Card image cap">
                             </div>
                             <div class="card mr-5">
-                                <img class="card-img-top" src="images/partenaires/fresh-vegan-food.png" width="200" height="180" alt="Card image cap">
+                                <img class="card-img-top" src="images/partenaires/fresh-vegan-food.png" alt="Card image cap">
                             </div>
                             <div class="card mr-5">
-                                <img class="card-img-top" src="images/partenaires/locally.png" width="200" height="180" alt="Card image cap">
+                                <img class="card-img-top" src="images/partenaires/locally.png"  alt="Card image cap">
                             </div>
                             <div class="card mr-5">
-                                <img class="card-img-top" src="images/partenaires/vegan-food.png" width="200" height="180" alt="Card image cap">
+                                <img class="card-img-top" src="images/partenaires/vegan-food.png"  alt="Card image cap">
                             </div>
                     </div>
                     <br>

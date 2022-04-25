@@ -626,7 +626,7 @@ footer a:hover {
 }
 
 
-/* Small devices (landscape phones, 576px and up)*/
+/* Small devices (landscape phones, 576px and up
 
 @media (min-width: 576px) {
       
@@ -642,7 +642,7 @@ footer a:hover {
 
 		 }
 
-/* Medium devices (tablets, 768px and up)*/
+Medium devices (tablets, 768px and up)
 
 
 @media screen and (min-width: 780px) {
@@ -653,4 +653,4 @@ footer a:hover {
 	margin: auto;
 	width: 90%;
 	}
-}
+}*/
