@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Accueil</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/sForm.js"></script>
+    <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+    <script src="js/tms-0.4.1.js"></script>
+    <script>
+        $(window).load(function () {
+            $('.slider')._TMS({
+                show: 0,
+                pauseOnHover: false,
+                prevBu: '.prev',
+                nextBu: '.next',
+                playBu: false,
+                duration: 800,
+                preset: 'fade',
+                pagination: true,//'.pagination',true,'<ul></ul>'
+                pagNums: false,
+                slideshow: 8000,
+                numStatus: false,
+                banners: false,
+                waitBannerAnimation: false,
+                progressBar: false
+            })
+        });
+        $(window).load(
+            function () {
+                $('.carousel1').carouFredSel({
+                    auto: false, prev: '.prev', next: '.next', width: 960, items: {
+                        visible: {
+                            min: 1,
+                            max: 4
+                        },
+                        height: 'auto',
+                        width: 240,
+
+                    }, responsive: false,
+
+                    scroll: 1,
+
+                    mousewheel: false,
+
+                    swipe: {onMouse: false, onTouch: false}
+                });
+
+
+            });
+
+    </script>
+    <style>
+        .contenant {
+            position: relative;
+            text-align: center;
+            color: black;
+        }
+        .texte_centrer {
+            position: absolute;
+            top: 82%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <!--==============================header=================================-->
+    <header>
+        <div class="container_12 header">
+            <div class="grid_12">
+                <a href="index.php"><img  id="logo" src="images/magicien.png" width="150" alt="EXTERIOR"></a>
+                <div class="menu_block">
+                    <nav class="d-flex align-items-center">
+                        <ul class="sf-menu d-flex align-items-center">
+                            <li><a class="current" href="index.php">Accueil</a></li>
+                            <li><a href="boutique.php">Boutique</a></li>
+                            <li><a href="galerie.php">Galerie</a></li>
+                            <li><a href="blog.php">Blog</a></li>
+                            
+                            <li><a href="contact.php">Contact</a></li>
+                        </ul>
+                        <?php if (!isset($_SESSION['loggedin'])){ ?>
+                                <button type="button" class="btn btn-info btn-round ml-4 btn-login" data-toggle="modal"
+                                        data-target="#loginModal" id="toggle">
+                                    Login
+                                </button>
+                                <a href="inscription.php"><button type="button" class="btn btn-info btn-round ml-4 btn-login" data-toggle="modal"
+                                        data-target="#inscriptionModal" id="toggle">
+                                    Inscription
+                                </button></a>
+                            <?php } else{ ?>
+                                <p class="text-info h5 ml-5"> Welcome <?php echo $_SESSION['Nom']?></p>
+                            <?php } ?>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="slider-relative">
+    <div class="container_12">
+            <div class="grid_12">
+                    <?php
+                    if ($recette1) {
+                    ?>
+                    <img src="images/<?php echo $recette1['imgRecette'];?>" alt="" ;>
+                    <div class="texte_centrer float-left" >
+                        <p class="text-dark " style="font-size: 30px;opacity: 0.75;">
+                            <?php echo $recette1["titre"] ?></p>
+                        <button class="btn btn-light text-info " name="button" type="button">
+                            <a  href="recette.php?id=<?php echo $recette1['id'];?>">VOIR LA RECETTE</a>
+                        </button>
+                    </div>
+                    <?php
+                    } else {
+                        echo "0 results";
+                    }
+                    ?>
+            </div>
+        </div>
+    </div>
+    <!--=======content================================-->
+    
+    <div class="content page1">
+        <div class="ic"></div>
+        <div class="container_12">
+            <div class="grid_12">
+            <br>
+            <div class="hor_separator "></div>
+            <br>
+            <h3>LA BOUTIQUE DES CHEFS </h3>
+            <br>
+                <div class="page1_block col1 d-flex justify-content-center">
+                    <br/>
+                    <img src="images/page2_img6.jpg" alt="">
+                    <img src="images/page2_img5.jpg" alt="">
+                    <img src="images/page2_img4.jpg" alt="">
+                    <img src="images/page2_img4.jpg" alt="">
+                    <div class="extra_wrapper">
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-outline-primary all-chef" name="button" type="button">
+                    <a href="chef.php">Voir tous</a>
+                </button>
+            </div>
+            <div class="clear"></div>
+            <br>
+            <div class="grid_12">
+                <div class="hor_separator"></div>
+            </div>
+            <div class="grid_12">
+                <div class="car_wrap">
+                    <h2>TEMOIGNAGE</h2>
+                    <div class="col-12 block-temoignage ">
+                        <?php
+                        foreach ($comment as  $value){
+                            //  les tableaux associatives : forach
+                            // for(i=0;i<sizeOf($comment); i++) : les tableaux 
+                        ?>
+                            <div class="card mb-5">
+                                <img class="card-img-top" src="images/Temoignage/<?php echo $value["img"];?>" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title mt-3"><?php echo $value["Nom"]." ".$value["Prenom"];?></h5>
+                                    <p class="card-text text-dark mb-4 mt-2"><?php echo $value["content"];?></p>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                    ?>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="grid_12">
+                <div class="hor_separator"></div>
+            </div>
+            <div class="grid_12">
+                <div class="car_wrap">
+                    <h2>Nos partenaires</h2>
+                    <div class="col-12 d-flex flex-wrap justify-content-center ">
+                            <div class="card mr-5">
+                                <img class="card-img-top" src="images/partenaires/100-organic-product.png" width="200" height="180" alt="Card image cap">
+                            </div>
+                            <div class="card mr-5">
+                                <img class="card-img-top" src="images/partenaires/100-organic.png" width="200" height="180" alt="Card image cap">
+                            </div>
+                            <div class="card mr-5">
+                                <img class="card-img-top" src="images/partenaires/fresh-vegan-food.png" width="200" height="180" alt="Card image cap">
+                            </div>
+                            <div class="card mr-5">
+                                <img class="card-img-top" src="images/partenaires/locally.png" width="200" height="180" alt="Card image cap">
+                            </div>
+                            <div class="card mr-5">
+                                <img class="card-img-top" src="images/partenaires/vegan-food.png" width="200" height="180" alt="Card image cap">
+                            </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+            <div class="grid_12">
+                <div class="hor_separator"></div>
+                
+            </div>
+            <h2>DERNIER RECETTE</h2>
+            <div class="grid_12 d-flex flex-wrap justify-content-center ">
+                <div class="car_wrap">
+                    
+                    <?php
+                            //  les tableaux associatives : forach
+                            // for(i=0;i<sizeOf($recette); i++) : les tableaux 
+                        ?>
+                   
+                    <ul class="carousel1">
+                        <?php
+                        if ($recettes) {
+                            foreach ($recettes as  $recette){
+                            // output data of each row
+                                ?>
+                                <li>
+                                    <div><img src="images/<?php echo $recette["imgRecette"];?>" alt="">
+
+                                        <?php echo'<br>' ?>
+                                       
+                                        <div class="col1 upp"> <?php echo $recette["titre"] ;?>
+                                         <?php echo'<br>' ?>
+                                         <?php echo $recette["DateCreation"];?>
+                                        </div>
+                                        <?php echo'<br>' ?>
+                                        
+                                        <span> <?php echo $recette["description"] ?></span>
+                                </li>
+                                <?php
+                            }
+                        } else {
+                            echo "0 results";
+                        }
+                        
+                    
+                        ?>
+
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="clear"></div>
+            <div class="bottom_block">
+                <div class="grid_6">
+                    <br>
+                    <h3>Rejoindrez-nous</h3>
+                    <div class="  ">
+                        <a href="#"><img  style="width:8% " src="images/twitter.svg"></a>
+                        <a href="#"><img  style="width:5%" src="images/facebook-f.svg"></a>
+                        <a href="#"><img  style="width:8%" src="images/instagram.svg"></a>
+                        <a href="#"><img  style="width:8%" src="images/linkedin-in.svg"></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="current"><a href="index.php">Accueil</a></li>
+                            <li><a href="boutique.php">Boutique</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                            <li><a href="galerie.php">Galerie</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <div class="grid_6">
+
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!------------login ------>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-title text-center">
+                    <h4>Connexion</h4>
+                </div>
+                <div class="d-flex flex-column text-center">
+                    <form action = "index.php" method = "post">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Your email address...">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Your password...">
+                        </div>
+                      
+                        <button type="submit" class="btn btn-info btn-block btn-round" value="Connexion" data-toggle="modal"
+                                        data-target="#loginModal" id="toggle">Connexion</button>
+                        
+                    </form>
+
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+            
+                <div class="signup-section">Vous n'avez pas un compte? <a href="inscription.php" class="text-info"> Inscription </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- popup inscription 
+<div class="modal fade" id="inscriptionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-title text-center">
+                    <h4>Inscription</h4>
+                </div>
+                <div class="d-flex flex-column text-center">
+                    <form action = "index.php" method = "post">
+                        <div class="row">
+                        <div class="form-group col-6">
+                            <input type="text" name="nom" class="form-control" id="nom" placeholder="votre nom...">
+                        </div>
+                        <div class="form-group col-6">
+                            <input type="text" name="prenom" class="form-control" id="prenom" placeholder="Votre prénom...">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Votre addresse email...">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Votre mot de passe...">
+                        </div>
+                        <input type="submit" class="btn btn-info btn-block btn-round" value="Inscription"/>
+                    </form>
+
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="signup-section">Vous avez déja inscrit? <a href="#a" class="text-info"> Connextion</a>.</div>
+            </div>
+        </div>
+    </div>
+</div>
+popup inscription -->
+    <!--==============================footer=================================-->
+
+    <footer>    
+  <div class="container_12">
+    <div class="grid_12">
+    Les Magiciens De Fouet © 2022  &nbsp;&nbsp;,  Les Droits Réservers.
+    </div>
+    <div class="clear"></div>
+  </div>
+
+
+</footer>
+    <script src="js/jquery.js"></script>
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script>
+        $(document).ready(function() {
+           $('toggle').click(function (){
+               $('#loginModal').modal('show');
+               $(function () {
+                   $('[data-toggle="tooltip"]').tooltip()
+               })
+           })
+        });
+    </script>
+    
+</body>
+</html>

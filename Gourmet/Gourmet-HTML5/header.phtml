@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+</head>
+<body>
+     <!--==============================header=================================-->
+<header>
+        <div class="container_12 header">
+            <div class="grid_12">
+                <a href="index.php"><img  id="logo" src="images/magicien.png" width="150" alt="EXTERIOR"></a>
+                <div class="menu_block">
+                    <nav class="d-flex align-items-center">
+                        <ul class="sf-menu d-flex align-items-center">
+                            <li><a class="current" href="index.php">Accueil</a></li>
+                            <li><a href="boutique.php">Boutique</a></li>
+                            <li><a href="galerie.php">Galerie</a></li>
+                            <li><a href="blog.php">Blog</a></li>
+                            <li><a href="ajoutRecette.php">Ajout recette</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                        </ul>
+                        <?php if (!isset($_SESSION['loggedin'])){ ?>
+                               <a href="index.php" <button type="button" class="btn btn-info btn-round ml-4 btn-login" data-toggle="modal"
+                                        data-target="#loginModal" id="toggle">
+                                    Login
+                                </button></a>
+                                <a href="inscription.php"><button type="button" class="btn btn-info btn-round ml-4 btn-login" data-toggle="modal"
+                                        data-target="#inscriptionModal" id="toggle">
+                                    Inscription
+                                </button></a>
+                            <?php } else{ ?>
+                                <p class="text-info h5 ml-5"> Welcome <?php echo $_SESSION['Nom']?></p>
+                            <?php } ?>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    </body>
+</html>
+   
+    

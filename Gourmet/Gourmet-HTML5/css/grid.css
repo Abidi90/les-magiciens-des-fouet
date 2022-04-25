@@ -19,11 +19,10 @@ body {
 
 /* `Container
 ----------------------------------------------------------------------------------------------------*/
-
 .container_12 {
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
+  width: 90%;
 }
 
 /* `Grid >> Global
@@ -120,7 +119,7 @@ body {
 }
 
 .container_12 .grid_12 {
-  width: 940px;
+  width: 100%;
 }
 
 /* `Prefix Extra Space >> 12 Columns

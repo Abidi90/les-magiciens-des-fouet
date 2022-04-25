@@ -37,7 +37,8 @@
      <body>
        <div class="main">
 <!--==============================header=================================-->
- <?php
+ 
+   <?php
   include 'header.phtml';
  ?>
 <!--=======content================================-->
@@ -45,41 +46,39 @@
 <div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - May 13, 2013!</div>
   <div class="container_12">
     <div class="grid_12">
-      <h2>Nos Meilleurs Chefs</h2>
+      <h2>Galerie</h2>
     </div>
-    <div class="clear"></div>
-    <div class="portfolio">
-      <div class="grid_4"><a href="" ><img src="images/jean-bakery.jpg" alt=""></a>
     
-    <h3>JEAN BAKERY </h3>
-    <br>
-      <p>Généralement, on utilise un texte en faux latin,
-       le Lorem ipsum ou Lipsum, qui permet donc de faire office de texte d'attente. L'avantage de le mettre
-        en latin est que l'opérateur sait au premier coup d'oeil que la page contenant ces lignes n'est pas valide.</p>
-       
+
+     
+     
+      <div class="menu">
+        <div class="grid_3 ">
+          <img src="images/page3_img1.jpg" alt="" class="img_inner">
+          <h3><a href="#">Donec</a></h3>
+        </div>
+        <div class="grid_3 ">
+          <img src="images/page3_img2.jpg" alt="" class="img_inner">
+          <h3><a href="#">Murtyio</a></h3>
+        </div>
+        <div class="grid_3 ">
+          <img src="images/page3_img3.jpg" alt="" class="img_inner">
+          <h3><a href="#">Holity as Polfh</a></h3>
+        </div>
+        <div class="grid_3 ">
+          <img src="images/page3_img4.jpg" alt="" class="img_inner">
+          <h3><a href="#">Kiperty</a></h3>
+        </div>
+        <div class="grid_3 ">
+          <img src="images/page3_img5.jpg" alt="" class="img_inner">
+          <h3 class="mb0"><a href="#">Gyloit</a></h3>
+        </div>
+        <div class="grid_3 ">
+          <img src="images/page3_img6.jpg" alt="" class="img_inner">
+          <h3 class="mb0"><a href="#">Liotymer</a></h3>
+        </div>
       </div>
-      <div class="grid_4"><a href="" ><img src="images/susan-ruffalo.jpg" alt=""></a>
-       
-    <h3>SUSAN RUFFALO </h3>
-    <br>
-      <p>Généralement, on utilise un texte en faux latin,
-       le Lorem ipsum ou Lipsum, qui permet donc de faire office de texte d'attente. L'avantage de le mettre
-        en latin est que l'opérateur sait au premier coup d'oeil que la page contenant ces lignes n'est pas valide.</p>
-      
-      </div>
-      <div class="grid_4"><a href="" ><img src="images/pierre-dupont.jpg" alt=""></a>
-      
-    <h3>PIERRE DUPONT </h3>
-    <br>
-      <p>Généralement, on utilise un texte en faux latin,
-       le Lorem ipsum ou Lipsum, qui permet donc de faire office de texte d'attente. L'avantage de le mettre
-        en latin est que l'opérateur sait au premier coup d'oeil que la page contenant ces lignes n'est pas valide.</p>
-      
-      </div>
-    
-    
-      
-    </div>
+
     <div class="clear"></div>
     <div class="bottom_block">
       <div class="grid_6">
@@ -112,7 +111,7 @@
 <footer>    
   <div class="container_12">
     <div class="grid_12">
-    Les Magiciens De Fouet © 2022  &nbsp;&nbsp;,  Les Droits Réservers.  
+      Les Magiciens De Fouet © 2022  &nbsp;&nbsp;,  Les Droits Réservers.
     </div>
     <div class="clear"></div>
   </div>

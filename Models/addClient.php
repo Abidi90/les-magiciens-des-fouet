@@ -1,36 +1,35 @@
 <?php
+include '../Gourmet/Gourmet-HTML5/config.php';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST["name"]; 
+        
+		$Nom   = $_POST["nom"];
 		$prenom = $_POST["prenom"];
-		$temoignage= $_POST["temoignage"];
-        $Id_recette= $_POS["id_recette"];
+		$Role =$_POST["role"];
+        
+		$email     =$_POST["email"];
+		$password  =$_POST["password"];
+		$image     =$_FILES["img"]["name"];
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "magicien_du_fouet";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
+	
 	// Check connection
-	if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-	}
 
-	$sql = "INSERT INTO  client  (name, prenom , temoignage , id_recette)
-	VALUES ('" . $name ."', '" . $prenom."' , '" . $temoignage."' ,'" . $id_recette."'   )";
+	$sql = "INSERT INTO  users (Nom, Prenom , Role , email,password,img)
+	VALUES ('" . $Nom ."', '" . $prenom."' , '" . $Role."' ,'" . $email."','" . $password."','" .$image."')";
 
-	if ($conn->query($sql) === TRUE) {
+
+	if ($connect->query($sql) === TRUE) {
+		 header('Location:../Gourmet/Gourmet-HTML5/index.php');
 	echo "New record created successfully";
 	
+	
 	} else {
-	echo "Error: " . $sql . "<br>" . $conn->error;
+	echo "Error: " . $sql . "<br>" . $connect->error;
 	}
 
 
 
-	$conn->close();
+	$connect->close();
 
 
 	

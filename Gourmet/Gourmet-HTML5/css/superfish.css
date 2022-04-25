@@ -25,39 +25,39 @@ nav{ position:relative;padding: 0px 0 0 0;}
 
 
 
-.sf-menu>li>a{
-	font-size: 18px;
+.sf-menu > li > a {
+	font-size: 20px;
 	font-family: 'Noto Sans', sans-serif;
-	color: #85423f;
+	color: #443bcb;
+	line-height: 40px;
+	font-weight: 500;
+	margin-right: 20px;
+	animation: transform .2s;
 	position: relative;
-	text-transform: uppercase;
-	line-height: 20px;
-	z-index: 999;
-	background: url(../images/spacer.png) 0 0 repeat;
-	border-radius: 5px;
-	position: relative;
-	display: block;
-	padding: 5px 14px 8px;
 }
-
-
-.sf-menu>li.sfHover>a, .sf-menu>li.current>a, .sf-menu>li:hover>a:hover {
+.sf-menu>li.sfHover>a, .sf-menu>li.current>a, .sf-menu>li:hover>a:hover, .sf-menu > li > a.current {
+	transform: scale(1.1);
+	font-weight: 600;
+	text-decoration: none;
+}
+.menu_block .btn-login {
+	border: solid 1px #443bcb;
+	color: #443bcb;
+	font-size: 20px;
+	font-weight: 500;
+	background-color: unset;
+	padding: 8px 35px 9px;
+}
+.menu_block .btn-login:hover {
 	color: #fff;
-	background: #e2827e;
-	padding: 6px 14px 7px;
+	background-color: #443bcb;
 }
-
-
-
 /*================================>> 2 Level <<========================================*/
 .sf-menu li ul,.sf-menu li.sfHover>ul{
 	top:34px;
 	left: 0;
 	width: 100%;
-	z-index: 999; 
-
-
-
+	z-index: 999;
 }
 .sf-menu li ul li{
 	text-align: center; 
@@ -72,8 +72,8 @@ nav{ position:relative;padding: 0px 0 0 0;}
 .sf-menu li ul li a{
 	font-size: 18px;
 	font-family: 'Noto Sans', sans-serif;
-	background: #e9afac;
-	color: #916564;
+	font-weight: 500;
+	color: #1e1878;
 	text-transform: uppercase;
 	line-height: 20px;
 	position: relative;
@@ -81,12 +81,12 @@ nav{ position:relative;padding: 0px 0 0 0;}
 	position: relative;
 	display: block;
 	padding: 6px 0px 7px;
+	animation: transform .2s;
 }
 
 .sf-menu li li a:hover, 
 .sf-menu li.sfHover li.sfHover>a {  
-	color: #fff;
-	background: #e2827e;
+	transform: scale(1.08);
 
 }
 

@@ -64,6 +64,7 @@ $conn->close();
      <script src="js/sForm.js"></script>
      <script src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
      <script src="js/tms-0.4.1.js"></script>
+     
      <script>
       $(window).load(function(){
       $('.slider')._TMS({
@@ -135,7 +136,7 @@ height: 'auto',
        <div class="main">
 <!--==============================header=================================-->
  <header> 
-  <div class="container_12">
+  <div class="container_12 header">
     <div class="grid_12">
     <h1><a href="index.html"><img src="images/magicien.png" alt="EXTERIOR"></a> </h1>
     
@@ -144,9 +145,9 @@ height: 'auto',
             <ul class="sf-menu">
           
               <li><a class="current" href="index.php">Accueil</a></li>
-              <li><a href="index-1.php">Boutique</a> </li>  
-              <li><a href="index-3.php">Galerie</a></li>   
-              <li><a href="index-2.php">Blog</a></li>
+              <li><a href="boutique.php">Boutique</a> </li>  
+              <li><a href="gelerie.php">Galerie</a></li>   
+              <li><a href="blog.php">Blog</a></li>
                 <?php if (!isset($_SESSION['loggedin'])){ ?>   <li>
                     <button type="button" class="btn btn-info btn-round ml-4" data-toggle="modal"
                             data-target="#loginModal" id="toggle">
@@ -193,10 +194,7 @@ height: 'auto',
         <h2>Bienvenu</h2>
         <div class="page1_block col1">
           <img src="images/welcome_img.png" alt="">
-          <div class="extra_wrapper">
-            <p><span class="col2"><a href="http://blog.templatemonster.com/free-website-templates/" rel="nofollow">
-            
-          </div>
+          
           <div class="clear"></div>
         </div>
       </div>
@@ -226,7 +224,38 @@ height: 'auto',
       </div>
 
       <div class="clear "></div>
+     <div class="ic"></div>
+        <br>
+        <div class="container_12">
+            <div >
+                <form action="../../Models/addTemoignage.php" method="POST" enctype="multipart/form-data">
+                
+                    <br>
+                    <div class="form-floating">
+                    <label class="form-label">  
+                    <h6> Commentaire: </h6>
+                    </label>
+                    <textarea class="form-control"  name="content"></textarea>
+                    </div>
+                   
+                   
+                    <br>
+                    <div class="mb-3">
+                    <label class="form-label">
+                    <h6> IMG TEMOIN </h6>
+                    </label>
+                    <input class="form-control" type="file" name="imgTemoi">
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Commenter</button>
+                    </div>
+                </form>
 
+              
+            </div>
+        </div>
+    
       <div class="grid_12 ">
         <div class="car_wrap">
 
@@ -243,10 +272,10 @@ height: 'auto',
         </div>
         <nav><ul>
                    <li class="current"><a href="index.php">Accueil</a></li>
-                   <li ><a href="index-1.php">Boutique</a></li>
+                   <li ><a href="boutique.php">Boutique</a></li>
                    <li><a href="#">Mentions légales</a></li>
-                   <li><a href="index-3.php">Galerie</a></li>
-                   <li><a href="index-5.php">Contacts</a></li>
+                   <li><a href="gelerie.php">Galerie</a></li>
+                   <li><a href="contact.php">Contacts</a></li>
                  </ul></nav>
       </div>
       
@@ -265,7 +294,7 @@ height: 'auto',
 <footer>    
   <div class="container_12">
     <div class="grid_12">
-     Les Magiciens De Fouet © 2022  &nbsp;&nbsp; |&nbsp;&nbsp;   <a href="#">Privacy Policy</a>    &nbsp;&nbsp;|&nbsp;&nbsp;  Website Template designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
+     Les Magiciens De Fouet © 2022  &nbsp;&nbsp; |&nbsp;&nbsp;   <a href="#">Privacy Policy</a>    &nbsp;&nbsp;|&nbsp;&nbsp;  
     </div>
     <div class="clear"></div>
   </div>

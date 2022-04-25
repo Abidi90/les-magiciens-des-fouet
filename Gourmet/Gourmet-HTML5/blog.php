@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
      <head>
      <title>Menu</title>
      <meta charset="utf-8">
@@ -27,57 +27,39 @@
      <body>
        <div class="main">
 <!--==============================header=================================-->
- <header> 
-  <div class="container_12">
-    <div class="grid_12">
-    <h1><a href="index.php"><img src="images/magicien.png" alt="EXTERIOR"></a> </h1>
-    
-         <div class="menu_block">
-           <nav  class="" >
-            <ul class="sf-menu">
-                 
-              <li><a class="current" href="index.php">Accueil</a></li>
-              <li><a href="index-1.php">Boutique</a> </li>  
-              <li><a href="index-3.php">Galerie</a></li>   
-              <li><a href="index-2.php">Blog</a></li>
-                 </ul>
-              </nav>
-           <div class="clear"></div>
-           </div>
-           <div class="clear"></div>
-      </div>
-    </div>
-</header>
+ <?php
+  include 'header.phtml';
+ ?>
 <!--=======content================================-->
 
 <div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - May 13, 2013!</div>
   <div class="container_12">
-    <div class="grid_6">
-      <h2>Our Menu</h2>
-      <p class="col2 inn1"><a href="#">Integer non metus justo ac posuere turpis. Integer iaculis porta metus, in aliquam orci vehicula sit amet. Suspendisse turpis mauris, laoreet ac aliquet a lobortis in massa. Etiam tortor metus, tincidunt vel congue etu</a></p>
-      <p>Aenean sed nunc lorem, nec ornare nibh. Pellentesque vitae sem odio. Vivamus vulputate est eget elit rutrum a consectetur justo aliquet. Aliquam hendrerit consectetur mi, non molestie massa venenatis quis. Integer aliquet euismod nisl, et sagittis sem scelerisque sit amet. Etiam dapibus, tellus et imperdiet pulvinar, urna nunc consectetur enim, in </p>
+    <div class="grid_10">
+      <h2>Notre Carte</h2>
+  La peur n'est pas seulement parfaite et laide. Parfait pour la peur des flèches, dans le cas de certains véhicules orcs c'est important. Le massage est un endroit honteux pour commencer. Même la peur du tortionnaire
+      <p>Enée, mais maintenant le véhicule, et non pour décorer le ballon. Je déteste beaucoup la vie. Il n'est pas nécessaire que la composition de l'élite vive sur la route principale. Peut-être mon bureau principal, pas la masse de l'employé venimeux. Integer aliquet euismod nisl, et arrow sem scelerisque sit amet. Même la vaisselle, la terre et le coussin, la principale raison
       <div class="menu">
-        <div class="grid_3 alpha">
+        <div class="grid_3 ">
           <img src="images/page3_img1.jpg" alt="" class="img_inner">
-          <h3><a href="#">Donec</a></h3>
+          <h3><a href="#">Jusque là</a></h3>
         </div>
-        <div class="grid_3 omega">
+        <div class="grid_3 ">
           <img src="images/page3_img2.jpg" alt="" class="img_inner">
           <h3><a href="#">Murtyio</a></h3>
         </div>
-        <div class="grid_3 alpha">
+        <div class="grid_3 ">
           <img src="images/page3_img3.jpg" alt="" class="img_inner">
-          <h3><a href="#">Holity as Polfh</a></h3>
+          <h3><a href="#">Sainteté en tant que Polfh</a></h3>
         </div>
-        <div class="grid_3 omega">
+        <div class="grid_3 ">
           <img src="images/page3_img4.jpg" alt="" class="img_inner">
           <h3><a href="#">Kiperty</a></h3>
         </div>
-        <div class="grid_3 alpha">
+        <div class="grid_3 ">
           <img src="images/page3_img5.jpg" alt="" class="img_inner">
           <h3 class="mb0"><a href="#">Gyloit</a></h3>
         </div>
-        <div class="grid_3 omega">
+        <div class="grid_3 ">
           <img src="images/page3_img6.jpg" alt="" class="img_inner">
           <h3 class="mb0"><a href="#">Liotymer</a></h3>
         </div>
@@ -85,7 +67,7 @@
       <div class="clear"></div>
     </div>
     <div class="grid_5 prefix_1">
-      <h2 class="head2">Chef’s Secrets</h2>
+      <h2 class="head2">Les secrets du chef</h2>
       <ul class="list l1">
         <li><a href="#"> Maecenas malesuada sapien </a></li>
         <li><a href="#">Etiam tortor metus, tincidunt vel gtcongue </a></li>
@@ -102,7 +84,7 @@
         <li><a href="#">Vvamus vulputate est eet elit </a></li>
         <li class="mb0"><a href="#"> Am blandit metus eet pretium </a></li>
       </ul>
-      <h2 class="head1">Wine List</h2>
+      <h2 class="head1">Carte des vins</h2>
       <ul class="list">
         <li><a href="#"> Koalesuada  libero </a></li>
         <li><a href="#">Ortor metus vel </a></li>
@@ -119,18 +101,18 @@
       <div class="grid_6">
        <br>
        <h3>Rejoindrez-nous</h3>
-        <div class="socials">
-          <a href="#"><img src"images/twitter.svg"></a>
-          <a href="#"><img src"images/facebook-f.svg"></a>
-          <a href="#"><img src"images/instagram.svg"></a>
-          <a href="#"><img src"images/linkedin-in.svg"></a>
-        </div>
+        <div class="  ">
+                        <a href="#"><img  style="width:8% " src="images/twitter.svg"></a>
+                        <a href="#"><img  style="width:5%" src="images/facebook-f.svg"></a>
+                        <a href="#"><img  style="width:8%" src="images/instagram.svg"></a>
+                        <a href="#"><img  style="width:8%" src="images/linkedin-in.svg"></a>
+                    </div>
         <nav><ul>
                    <li ><a href="index.php">Accueil</a></li>
-                   <li ><a href="index-1.php">Boutique</a></li>
+                   <li ><a href="boutique.php">Boutique</a></li>
                    <li><a href="#">Mentions légales</a></li>
-                   <li ><a href="index-3.php">Galerie</a></li>
-                   <li><a href="index-5.php">Contacts</a></li>
+                   <li ><a href="gelerie.php">Galerie</a></li>
+                   <li><a href="contact.php">Contacts</a></li>
                  </ul></nav>
       </div>
       <div class="grid_6">
@@ -144,9 +126,9 @@
 <!--==============================footer=================================-->
 
 <footer>    
-  <div class="container_12">
+  <div class="container_12"
     <div class="grid_12">
-     Gourmet © 2013  &nbsp;&nbsp; |&nbsp;&nbsp;   <a href="#">Privacy Policy</a>    &nbsp;&nbsp;|&nbsp;&nbsp;  Website Template designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
+    
     </div>
     <div class="clear"></div>
   </div>

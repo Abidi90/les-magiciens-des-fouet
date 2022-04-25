@@ -1,16 +1,17 @@
 <?php
 include '../Gourmet/Gourmet-HTML5/config.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	
 
-	$titre = $_POST["titre"]; 
-	$description = $_POST["description"];
+	$description = $_POST["content"]; 
 	$date= date("Y-m-d H:i:s");
-	$id_cuisinier= $_POST["cuisinier"];
-	$image= $_FILES["img"]['name'];
+	session_start();
+	$id_client= $_SESSION['id'];
+	$imageT= $_FILES["imgTemoi"]['name'];
 
 	// Create recette
-	$sql = "INSERT INTO  recette  (titre, description , DateCreation , id_cuisinier,imgRecette)
-	VALUES ('" . $titre ."', '" . $description."' , '" . $date."' ,'" . $id_cuisinier."','" . $image."'   )";
+	$sql = "INSERT INTO temoignage(content, Date, id_client, imgTemoi) 
+	VALUES ('" . $description."' , '" . $date."' ,'" . $id_client."','" . $imageT."'   )";
 
 	if ($connect->query($sql) === TRUE) {
 		header('Location: ../Gourmet/Gourmet-HTML5/index.php');  
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-	$conn->close();
+	
 
 
 	

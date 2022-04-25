@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 }
 
 // sql to create table
-$sql = "CREATE TABLE client (
+$sql = "CREATE TABLE users (
 ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 Nom VARCHAR(50) NOT NULL,
 Prenom VARCHAR(50) NOT NULL,
@@ -33,7 +33,7 @@ Id_recette INT (11))";
 
 
 if ($conn->query($sql) === TRUE) {
-  echo "Table Client created successfully";
+  echo "Table users created successfully";
 } else {
   echo "Error creating table: " . $conn->error;
 }
